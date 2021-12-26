@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="myscript.js"></script>
+        <title>Bascula</title>
+    </head>
+    <body>
+        <header>
+            <div id="iconos">
+                <div id="iconoDeEmserusa">
+                    <img src="logoemserfusa.png">
+                </div>       
+                <div id="iconoHydrotech">
+                    <img src="logo.png">
+                </div>         
+            </div>
+            <div id="todoelcontenido">
+            <div id="titulos">
+                <h1>EMPRESA DE SERVICIOS PUBLICOS DE FUSAGASUGA ESP</h1>
+                <h3>CONTRATO: SERVICIO DE TRANSFERENCIA Y TRANSPORTE A GRANEL-ESTACION DE PESAJE.</h3>
+                <h3>CONTRATISTA : HYDROTECH INGENIERIA S.A.S.</h3>
+            </div>
+            <div id="formulario">
+                <form>
+                    <p> <strong>
+                        <label>Recibo No.
+                            <input type="number" min="1" name="num" id="num" value="0">
+                        </label>
+                    </p>
+                    
+                    <p>
+                        <label>Placa:
+                            <input type="text" maxlength="6" minlength="6" id="placa">
+                        </label>
+                    </p>
+                    <datalist id="datos">
+                        <option>Nombre</option>
+                            <option>Camilo Acosta</option>
+                            <option>Carlos Sanchez</option>
+                            <option>Cesar Sanchez</option>
+                            <option>Daniel Mendez</option>
+                            <option>Ehiler Cortez</option>
+                            <option>Fredy Villaveces</option>
+                            <option>Francisco Forero</option>
+                            <option>Jaime Barreto</option>    
+                            <option>Jose Pachon</option>
+                            <option>Jorge Nieto</option>
+                            <option>Jaime Nieto</option>
+                            <option>Jhon Baca</option>
+                            <option>Jose Gracia</option>
+                            <option>Miguel Diaz</option>
+                            <option>Nestor Reyes</option>
+                            <option>Oscar Berbeo</option>
+                            <option>Oscar Gutierrez</option>
+                            <option>Oscar Ruiz</option>
+                            <option>Oscar Pardo</option>
+                    </datalist>
+                    <p class="seleccion">
+                        <label for="Nombre-Conductor" class="seleccion">Nombre Conductor:</label>
+                        <input type="tel" list="datos">
+                    </p>
+                    <p class="seleccion">
+                        <label for="tipoDeCarga" class="seleccion">Tipo de carga: </label>
+                        <select name="Tipo-De-Carga" id="tipoDeCarga">
+                            <option value="1">Residuos Domiciliarios</option>
+                            <option value="2">Residuos Especiales</option>
+                            <option value="3">Reciclaje</option>
+                            <option value="4">Otro</option>
+                        </select>
+                    </p>
+                    
+                    <p>
+                        <label>Fecha Entrada: 
+                            <input type="text" id="fecha" disabled="true">
+                        </label>
+                    </p>
+                    
+                    <p>
+                        <label>Hora Entrada: 
+                            <input type="text" id="horaa" disabled="true">
+                        </label>
+                    </p>
+                    
+                    <p>
+                        <label>Fecha Salida: 
+                            <input type="text" id="fechaa" disabled="true">
+                        </label>
+                    </p>
+                    
+                    <p>
+                        <label>Hora Salida: 
+                            <input type="text" id="hora" disabled="true">
+                        </label>
+                    </p>
+                    <br>
+                    <p>
+                        <label>PESO CON CARGA:
+                            <input type="text"  id="peso1" disabled="true">
+                            Toneladas
+                        </label>
+                    </p>
+                    <p>
+                        <label>Peso 1ª Eje
+                            <input type="text" id="EJE1"  class="ejes" value="0">
+                            Toneladas |
+                        </label>
+            
+                        <label> Peso 2ª Eje
+                            <input type="text" id="EJE2"  class="ejes" value="0">
+                            Toneladas |
+                        </label>
+            
+                        <label> Peso 3ª Eje
+                            <input type="text" id="EJE3"  class="ejes" value="0">
+                            Toneladas |
+                        </label>
+                    </p>
+                    <br>
+                    <p>
+                        <label>PESO SIN CARGA:
+                            <input type="text"  id="peso2" disabled="true">
+                            Toneladas
+                        </label>
+                    </p>
+                    <p>
+                        <label>Peso 1ª Eje
+                            <input type="text" id="EJE4"  class="ejes" value="0">
+                            Toneladas |
+                        </label>
+            
+            
+                        <label> Peso 2ª Eje
+                            <input type="text" id="EJE5"  class="ejes" value="0">
+                            Toneladas |
+                        </label>
+            
+            
+                        <label> Peso 3ª Eje
+                            <input type="text" id="EJE6"  class="ejes" value="0">
+                            Toneladas |
+                        </label>
+                    </p>
+                    <br>
+                    <p>
+                        <label>PESO NETO:
+                            <input type="text"  id="pesoneto" autocomplete=on disabled="true">
+                            Toneladas
+                        </label>
+                    </p>
+                    
+                    <input type="button" value="Dar Resultados" name="name" onclick="operar();">
+                    <br>   
+                    <p>
+                        <h4>Observaciones</h4>
+                        <textarea cols="30" rows="3" style="resize: none;" id="ob"></textarea>
+                    </p>
+                </form>
+                <a href="javascript:window.print()" class="imprimir" id="boton">
+                    <input type="button" value="Imprimir" onclick="bimprimir();">
+                </a>
+                <a href="#iconos">
+                    <input type="button" value="Nuevo Recibo" onclick="reiniciar();">
+                </a>
+                </div>
+                <div id="firma1">
+                    <h4>Firma Bascula</h4>
+                </div>
+                <div id="firma2">
+                    <h4>Firma Conductor</h4>
+                </div>
+                </div>
+            </div>
+        </header>
+    </body>
+</html>
